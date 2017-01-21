@@ -1,7 +1,7 @@
 <button onclick="sc()">Generate scramble 4x4</button><br/>
 <button onclick="sb()">Generate scramble X-Cube</button><br/>
 <script>
-function rndEl(b){return b[~~(Math.random()*b.length)]}function rn(b){return~~(Math.random()*b)}function scramble(b,e,h,f){var c,d,g=[],a=[];f||(f={});if(!(2>b.length||1>e.length)){for(c=0;c<b.length;++c)for(d=0;d<e.length;++d)g.push(""+b[c]+e[d]);for(;a.length<h;)a.push(rndEl(g)),1<a.length&&f[a[a.length-1][0]]==a[a.length-2][0]&&a.pop(),2<a.length&&a[a.length-1][0]==a[a.length-2][0]&&a.pop();return a.join(" ")}}function sc(){document.body.innerHTML=(scramble(["l","r","U"],["","'","2"],40,{l:"r",r:"l"}));}
-function sb(){document.body.innerHTML=(scramble("UDRLFBufbl".split(""),["","'","2"],60,{R:"L",L:"R",F:"B",B:"F",D:"U",U:"D",u:"d",d:"u",f:"b",b:"f"}));}
+function rndEl(b){return b[~~(Math.random()*b.length)]}function rn(b){return~~(Math.random()*b)}function scramble(b,e,h,f){var c,d,g=[],a=[];f||(f={});if(!(2>b.length||1>e.length)){for(c=0;c<b.length;++c)for(d=0;d<e.length;++d)g.push(""+b[c]+e[d]);for(;a.length<h;)a.push(rndEl(g)),1<a.length&&f[a[a.length-1][0]]==a[a.length-2][0]&&a.pop(),2<a.length&&a[a.length-1][0]==a[a.length-2][0]&&a.pop();return a.join(" ")}}function sc(){document.getElementById("a").innerHTML=(scramble(["l","r","U"],["","'","2"],40,{l:"r",r:"l"}));}
+function sb(){document.getElementById("a").innerHTML=(scramble("UDRLFBufbl".split(""),["","'","2"],60,{R:"L",L:"R",F:"B",B:"F",D:"U",U:"D",u:"d",d:"u",f:"b",b:"f"}));}
 </script>
-<body></body>
+<div id="a"></div>
